@@ -1286,7 +1286,7 @@ void V810::fpu_subop(v810_timestamp_t &timestamp, int sub_op, int arg1, int arg2
 	     return;
 
    case MPYHW: timestamp += 9 - 1;	// Unknown?
-	       P_REG[arg1] = (int32)(int16)(P_REG[arg1] & 0xFFFF) * (int32)(int16)(P_REG[arg2] & 0xFFFF);
+	       P_REG[arg1] = (int32)P_REG[arg1] * (int32)(int16)(P_REG[arg2] & 0xFFFF);
 	       return;
   }
  }
